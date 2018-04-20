@@ -12,6 +12,10 @@
 
 ## Mini-lecture
 
+**Lots of things are trees.**
+
+Examples - the interpreter code.
+
 ## Worksheet
 
 ## Microquiz
