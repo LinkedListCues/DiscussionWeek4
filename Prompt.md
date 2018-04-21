@@ -1,20 +1,42 @@
-# DiscussionWeek4
-#### Trees
+# DiscussionWeek4 - Trees
 ##### Last updated Spring 2018
 
 ## Introduction
 ### Topics Covered
 - Tree terminology
-- Tree definitions in C#
 - Tree traversals
 - Depth-first and breadth-first traversal
 - Preorder, inorder, and postorder traversal
 
 ## Mini-lecture
 
-**Lots of things are trees.**
+### Definitions
 
-Examples - the interpreter code.
+*Tree*: a *graph* in which there is exactly one path between any given pair of nodes. A single node is a valid tree.
+*Node (Vertex)*: any of the individual pieces of the graph that makes up a tree. Can store arbitrary information about itself and its neighbors in the tree.
+*Root*: the special node at the top of a tree. All nodes are descendants of the root.
+*Child*: one of the nodes connected to a given node, one level lower. All of these nodes together are referred to as a node's *children*.
+*Descendants*: the transitive closure of "child-ness" of a given node; otherwise known as its children, plus its children's children, plus its children's children's children, and so on.
+*Parent*: the node immediately above a given node. All nodes except the root have exactly one parent. The root has zero.
+*Ancestors*: the transitive close of "parent-ness" of a given node; otherwise known as its parent, plus its parent's parent, and so on.
+*Siblings*: nodes that share the same parent.
+*Left-most* and *Right-most Child*: looking at the tree, the left- and right-most child are the children farthest to the left and right, respectively. A tree does not have to have either.
+*Branching Factor*: the maximum number children a given node may have (if the branching factor is fixed). We are particularly fond of binary trees, which have a branching factor of 2.
+
+### Traversal of a Tree
+There are, broadly, two ways to traverse a tree:
+- Depth-first traversal
+- Breadth-first traversal
+
+*Depth-first traversal* starts at the root, then recursively traverses each of its children in order.
+
+*Breadth-first traversal* starts with the root, then traverses the nodes at depth 1, then at depth 2, and so.
+
+### Pre-, In-, and PostOrder Depth-First Traversal
+When one does a depth-first traversal, one has agency in the order in which nodes are processed. The valid orderings are
+- root, left child, right child -- this is called *preorder traversal*
+- left child, root, right child -- this is called *inorder traversal*
+- left child, right child, root -- this is called *postorder traversal*
 
 ## Worksheet
 
@@ -33,19 +55,17 @@ We've also written unit tests for each of the four traversal patterns that we've
 2. What broad category of data structure would you use for implementing depth-first traversal? What about breadth-first traversal? (1 word each)
 
 3. For the tree below, write the strings printed by breadth-first and preoder, inorder, and postorder depth-first traversal.
-                
+```     
         G       
-       - -      
       /   \     
      /     \    
     /       \   
     E       F   
-    -       -   
    / \     / \  
   /   \   /   \ 
  /     \ /     \
  A     B C     D
-
+```
 
 
 _Once you've submitted your microquiz at the link that your TA provided, you're good to go._
