@@ -1,36 +1,29 @@
-﻿using System;
-
-namespace DiscussionWeek4
+﻿namespace DiscussionWeek4
 {
     public class BinaryTree
     {
-        public BinaryTree Left
-        {
+        public BinaryTree Left {
             get;
             private set;
         }
 
-        public BinaryTree Right
-        {
+        public BinaryTree Right {
             get;
             private set;
         }
 
-        public string Data
-        {
+        public string Data {
             get;
             private set;
         }
 
-        public BinaryTree(string data)
-        {
+        public BinaryTree (string data) {
             Left = null;
             Right = null;
             Data = data;
         }
 
-        public BinaryTree(string data, BinaryTree left, BinaryTree right)
-        {
+        public BinaryTree (string data, BinaryTree left, BinaryTree right) {
             Left = left;
             Right = right;
             Data = data;
