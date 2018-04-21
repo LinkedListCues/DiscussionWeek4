@@ -6,7 +6,18 @@ namespace TreeTraversalTests
     [TestClass]
     public class TreeTraversalTests
     {
-        private static readonly BinaryTree BT = new BinaryTree("A",
+        /* the binary tree that everyone will be traversing
+                  A     
+                 / \    
+                /   \   
+               -     -  
+               B     C  
+              / \   / \ 
+             -   - -   -
+             D   E F   G
+         */
+        private static readonly BinaryTree BT =
+            new BinaryTree("A",
                 new BinaryTree("B",
                     new BinaryTree("D"),
                     new BinaryTree("E")
@@ -20,8 +31,8 @@ namespace TreeTraversalTests
         [TestMethod]
         public void BreadthFirstTraversal () {
             const string result = "ABCDEFG";
-            // TODO replace me with your implementation of a breadh-first traverser
-            ITraverser traverser = new MostlyCorrectTraverser();
+            // TODO replace me with your implementation of a breadth-first traverser
+            ITraverser traverser = new IncorrectTraverser();
             Assert.AreEqual(result, traverser.Traverse(BT));
         }
 
@@ -29,7 +40,7 @@ namespace TreeTraversalTests
         public void InOrderDepthFirstTraversal () {
             const string result = "DBEAFCG";
             // TODO replace me with your implementation of an inorder depth-first traverser
-            ITraverser traverser = new MostlyCorrectTraverser();
+            ITraverser traverser = new IncorrectTraverser();
             Assert.AreEqual(result, traverser.Traverse(BT));
         }
 
@@ -37,7 +48,7 @@ namespace TreeTraversalTests
         public void PreOrderDepthFirstTraversal () {
             const string result = "ABDECFG";
             // TODO replace me with your implementation of an preorder depth-first traverser
-            ITraverser traverser = new MostlyCorrectTraverser();
+            ITraverser traverser = new IncorrectTraverser();
             Assert.AreEqual(result, traverser.Traverse(BT));
         }
 
@@ -45,7 +56,7 @@ namespace TreeTraversalTests
         public void PostOrderDepthFirstTraversal () {
             const string result = "DEBFGCA";
             // TODO replace me with your implementation of an postorder depth-first traverser
-            ITraverser traverser = new MostlyCorrectTraverser();
+            ITraverser traverser = new IncorrectTraverser();
             Assert.AreEqual(result, traverser.Traverse(BT));
         }
     }

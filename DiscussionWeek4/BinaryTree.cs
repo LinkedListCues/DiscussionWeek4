@@ -1,5 +1,9 @@
 ﻿namespace DiscussionWeek4
 {
+    /// <summary>
+    /// Bare bones binary tree class.
+    /// Data here is a string, but this is easy enough to generalize to anything, or even to turn into a generic class.
+    /// </summary>
     public class BinaryTree
     {
         public BinaryTree Left {
