@@ -13,15 +13,25 @@
 ### Definitions
 
 *Tree*: a *graph* in which there is exactly one path between any given pair of nodes. A single node is a valid tree.
+
 *Node (Vertex)*: any of the individual pieces of the graph that makes up a tree. Can store arbitrary information about itself and its neighbors in the tree.
+
 *Root*: the special node at the top of a tree. All nodes are descendants of the root.
+
 *Child*: one of the nodes connected to a given node, one level lower. All of these nodes together are referred to as a node's *children*.
+
 *Descendants*: the transitive closure of "child-ness" of a given node; otherwise known as its children, plus its children's children, plus its children's children's children, and so on.
+
 *Parent*: the node immediately above a given node. All nodes except the root have exactly one parent. The root has zero.
+
 *Ancestors*: the transitive close of "parent-ness" of a given node; otherwise known as its parent, plus its parent's parent, and so on.
+
 *Siblings*: nodes that share the same parent.
+
 *Left-most* and *Right-most Child*: looking at the tree, the left- and right-most child are the children farthest to the left and right, respectively. A tree does not have to have either.
+
 *Branching Factor*: the maximum number children a given node may have (if the branching factor is fixed). We are particularly fond of binary trees, which have a branching factor of 2.
+
 
 ### Traversal of a Tree
 There are, broadly, two ways to traverse a tree:
